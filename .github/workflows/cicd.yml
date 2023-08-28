@@ -25,4 +25,4 @@ jobs:
       run: npm run lint
       
     - name: Run Karma tests
-      run: npm test --browsers=ChromeHeadless
+      run: ng test --watch=false --browsers=ChromeHeadless
