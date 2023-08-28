@@ -25,4 +25,4 @@ jobs:
       run: npx eslint .
       
     - name: Run Karma tests
-      run: ng test --watch=false
+      run: npm test --watch=false
