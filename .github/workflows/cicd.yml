@@ -28,7 +28,7 @@ jobs:
       run: npm run ng -- test --watch=false --browsers=ChromeHeadless\
 
     - name: Setup SonarQube
-      npm install -g sonarqube-scanner
+      run: npm install -g sonarqube-scanner
     
     - name: Run SonarQube Scanner
       run: sonar-scanner
