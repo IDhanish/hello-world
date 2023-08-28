@@ -27,11 +27,11 @@ jobs:
     - name: Run Karma Tests
       run: npm run ng -- test --watch=false --browsers=ChromeHeadless\
 
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-
-    - uses: sonarsource/sonarqube-scan-action@master
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      - name: Set up SonarQube
+        uses: sonarsource/sonarqube-action@v1
+        with:
+          sonar-login: ${{ secrets.SONAR_TOKEN }}
+          sonar-host: ${{ secrets.SONAR_HOST_URL }}
+          sonar-project-key: hello-world
+          sonar-project-name: hello-world
+          sonar-project-version: 1.0
