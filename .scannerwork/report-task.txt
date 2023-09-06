@@ -2,5 +2,5 @@ projectKey=hello-world
 serverUrl=http://localhost:9000
 serverVersion=10.0.0.68432
 dashboardUrl=http://localhost:9000/dashboard?id=hello-world
-ceTaskId=AYo70CS3eLjKHpx-z5Me
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYo70CS3eLjKHpx-z5Me
+ceTaskId=AYpp48uKag9-wr6L3oOi
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYpp48uKag9-wr6L3oOi
