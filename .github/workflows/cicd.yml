@@ -47,7 +47,7 @@ jobs:
          fetch-depth: 0
 
     - name: Configure Safe Directory
-      run: git config --global --add safe.directory /github/workspace
+      run: git config --global --add safe.directory /github/workspace+ REVISION= 2ec006849ea09c8d653d9b48c4781aa45bdce9e6
 
     - name: Rolls back to a certain version
       uses: fivebluepetals/rollback-action@v1.0
