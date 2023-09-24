@@ -46,6 +46,9 @@ jobs:
          ref: ${{ github.event.inputs.branch }}
          fetch-depth: 0
 
+    - name: Configure Safe Directory
+      run: git config --global --add safe.directory /github/workspace
+
     - name: Rolls back to a certain version
       uses: fivebluepetals/rollback-action@v1.0
       with:
