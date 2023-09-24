@@ -45,8 +45,8 @@ jobs:
 
     - name: Rollback to Previous Commit
       run: |
-        # Rollback to the previous commit (HEAD~1)
-        git reset --hard HEAD~1
+        # Rollback to the previous commit
+        git reset --hard 9cff909
 
     # Add steps for any necessary validation or rollback actions
 
