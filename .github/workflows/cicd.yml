@@ -45,5 +45,5 @@ jobs:
     - name: Rollback to Previous Commit
       run: |
         # Rollback to the previous commit
-        git reset --hard HEAD~4
+        git reset --hard -- HEAD~4
         
