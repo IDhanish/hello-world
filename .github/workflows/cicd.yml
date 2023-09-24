@@ -22,7 +22,7 @@ jobs:
       run: npm install
       
     - name: Run ESLint
-      run: npm run lin
+      run: npm run lint
       
     - name: Run Karma Tests
       run: npm run ng -- test --watch=false --browsers=ChromeHeadless\
@@ -42,15 +42,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      with:
-         ref: ${{ github.event.inputs.branch }}
-         fetch-depth: 0
-
-    - name: Configure Safe Directory
-      run: git config --global --add safe.directory /github/workspace+ REVISION= 2ec006849ea09c8d653d9b48c4781aa45bdce9e6
-
-    - name: Rolls back to a certain version
-      uses: fivebluepetals/rollback-action@v1.0
-      with:
-         branch: ${{ github.event.inputs.branch }}
-         revision: ${{ github.event.inputs.revision }}
+    - name: Rollback to Previous Commit
+      run: |
+        # Rollback to the previous commit
+        git reset --hard <commit-hash>
