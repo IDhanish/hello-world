@@ -22,7 +22,7 @@ jobs:
       run: npm install
       
     - name: Run ESLint
-      run: npm run lint
+      run: npm run lin
       
     - name: Run Karma Tests
       run: npm run ng -- test --watch=false --browsers=ChromeHeadless\
