@@ -22,7 +22,7 @@ jobs:
       run: npm install
       
     - name: Run ESLint
-      run: npm run lin
+      run: npm run lint
       
     - name: Run Karma Tests
       run: npm run ng -- test --watch=false --browsers=ChromeHeadless\
@@ -45,7 +45,7 @@ jobs:
     - name: Rollback to Previous Commit
       run: |
         # Rollback to the previous commit
-        git reset --hard c6a6c57
+        git reset --hard HEAD~1
     - name: Force Push to Repository
       run: |
         # Force push the changes to the repository
