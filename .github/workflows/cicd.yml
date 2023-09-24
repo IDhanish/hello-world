@@ -34,4 +34,23 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+  rollback:
+    runs-on: ubuntu-latest
+    needs: build
+    if: failure()
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Rollback to Previous Commit
+      run: |
+        # Rollback to the previous commit (HEAD~1)
+        git reset --hard HEAD~1
+
+    # Add steps for any necessary validation or rollback actions
+
+
+
+
         
