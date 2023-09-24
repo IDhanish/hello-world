@@ -42,6 +42,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with: 
+        ref: 49e982cc742cb4e6bc3488199544718c712f01bc
+      env:
+        ACTIONS_CACHE_NAME: no-cache
     - name: Rollback to Previous Commit
       run: |
         # Rollback to the previous commit
