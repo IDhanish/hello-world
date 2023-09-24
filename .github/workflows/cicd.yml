@@ -46,13 +46,4 @@ jobs:
       run: |
         # Rollback to the previous commit
         git reset --hard 9cff909bf1516e3366e29da53238adec64dca5e0
-
-
-
-
-<<<<<<< HEAD
-
         
-=======
-        
->>>>>>> 8e3144abd1198b3bf019774801b8dbf2a200f553
