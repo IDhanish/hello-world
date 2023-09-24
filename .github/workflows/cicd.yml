@@ -19,7 +19,7 @@ jobs:
         node-version: 18
         
     - name: Install dependencies
-      run: npm install
+      run: npm instal
       
     - name: Run ESLint
       run: npm run lint
@@ -46,6 +46,7 @@ jobs:
       run: |
         # Rollback to the previous commit
         git reset --hard 9cff909bf1516e3366e29da53238adec64dca5e0
+
 
 
 
