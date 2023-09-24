@@ -22,7 +22,7 @@ jobs:
       run: npm install
       
     - name: Run ESLint
-      run: npm run lint
+      run: npm run lin
       
     - name: Run Karma Tests
       run: npm run ng -- test --watch=false --browsers=ChromeHeadless\
@@ -45,4 +45,6 @@ jobs:
     - name: Rollback to Previous Commit
       run: |
         # Rollback to the previous commit
-        git reset --hard <commit-hash>
+        git remote add origin https://github.com/IDhanish/hello-world.git
+        git fetch
+        git reset --hard 49e982cc742cb4e6bc3488199544718c712f01bc
