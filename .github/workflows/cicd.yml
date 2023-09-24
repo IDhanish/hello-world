@@ -42,8 +42,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Rollback to Previous Commit
-      run: |
-        # Rollback to the previous commit
-        git reset --hard HEAD^1
-        
+      with:
+         ref: ${{ github.event.inputs.branch }}
+         fetch-depth: 0
+
+    - name: Rolls back to a certain version
+      uses: fivebluepetals/rollback-action@v1.0
+      with:
+         branch: ${{ github.event.inputs.branch }}
+         revision: ${{ github.event.inputs.revision }}
