@@ -45,7 +45,7 @@ jobs:
     - name: Rollback to Previous Commit
       run: |
         # Rollback to the previous commit
-        git reset --hard HEAD~1
+        git reset --hard 9cff909bf1516e3366e29da53238adec64dca5e0
     - name: Force Push to Repository
       run: |
         # Force push the changes to the repository
