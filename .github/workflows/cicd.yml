@@ -55,6 +55,8 @@ jobs:
         git fetch
         git reset --hard 1de89f159143b0329c64984d77e77ba5f99fc431
     - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        token: ${{ secrets.WORKFLOW_TOKEN }}
     - name: Push Rollback to Repository
       run: |
         # Push the rollback commit to the repository
