@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
     
     steps:
     - name: Checkout code
@@ -55,3 +58,4 @@ jobs:
       run: |
         # Push the rollback commit to the repository
         git push --force origin HEAD:master
+    - uses: stefanzweifel/git-auto-commit-action@v4
