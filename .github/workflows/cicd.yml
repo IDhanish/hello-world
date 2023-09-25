@@ -8,9 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     
     steps:
     - name: Checkout code
@@ -55,10 +52,8 @@ jobs:
         # Rollback to the previous commit
         git fetch
         git reset --hard 1de89f159143b0329c64984d77e77ba5f99fc431
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        token: ${{ secrets.WORKFLOW_TOKEN }}
+
     - name: Push Rollback to Repository
       run: |
         # Push the rollback commit to the repository
-        git push --force origin HEAD:master
+        git push --force origin master
