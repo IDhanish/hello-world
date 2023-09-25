@@ -22,7 +22,7 @@ jobs:
       run: npm install
       
     - name: Run ESLint
-      run: npm run lint
+      run: npm run lin
       
     - name: Run Karma Tests
       run: npm run ng -- test --watch=false --browsers=ChromeHeadless\
@@ -43,14 +43,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with: 
-        ref: 49e982cc742cb4e6bc3488199544718c712f01bc
+        ref: 732526b992b19ffd97307e65316113971ff639d6
       env:
         ACTIONS_CACHE_NAME: no-cache
     - name: Rollback to Previous Commit
       run: |
         # Rollback to the previous commit
         git fetch
-        git reset --hard 49e982cc742cb4e6bc3488199544718c712f01bc
+        git reset --hard 732526b992b19ffd97307e65316113971ff639d6
     - name: Push Rollback to Repository
       run: |
         # Push the rollback commit to the repository
