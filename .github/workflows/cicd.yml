@@ -54,4 +54,4 @@ jobs:
     - name: Force Push to Repository
       run: |
         # Force push the changes to the repository
-        git push --force origin master
+        git push origin master --force
