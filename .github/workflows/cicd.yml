@@ -51,3 +51,4 @@ jobs:
         # Rollback to the previous commit
         git fetch
         git reset --hard 49e982cc742cb4e6bc3488199544718c712f01bc
+        git push origin master
