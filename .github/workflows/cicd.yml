@@ -54,5 +54,4 @@ jobs:
     - name: Push Rollback to Repository
       run: |
         # Push the rollback commit to the repository
-        git pull origin master
-        git push origin HEAD:master
+        git push --force origin HEAD:master
