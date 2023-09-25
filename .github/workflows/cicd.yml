@@ -43,14 +43,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with: 
-        ref: HEAD~1
+        ref: 1de89f159143b0329c64984d77e77ba5f99fc431
       env:
         ACTIONS_CACHE_NAME: no-cache
     - name: Rollback to Previous Commit
       run: |
         # Rollback to the previous commit
         git fetch
-        git reset --hard HEAD~1
+        git reset --hard 1de89f159143b0329c64984d77e77ba5f99fc431
     - name: Push Rollback to Repository
       run: |
         # Push the rollback commit to the repository
